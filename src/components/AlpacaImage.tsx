@@ -6,13 +6,10 @@ type AlpacaImageProps = {
 };
 
 const AlpacaImage: React.FC<AlpacaImageProps> = ({ category, item }) => {
-  const getImagePath = (alpaca: AlpacaCategory, item: AlpacaItem) => {
-    return `/src/assets/alpaca/${alpaca.directory}/${item.filename}.png`;
-  };
 
   return (
     <img
-      src={getImagePath(category, item)}
+      src={item.src}
       className={
         category.label === "Backgrounds"
           ? "inset-0 w-full h-full object-cover"

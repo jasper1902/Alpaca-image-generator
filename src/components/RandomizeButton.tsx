@@ -21,7 +21,7 @@ const RandomizeButton: React.FC<RandomizeButtonProps> = ({
       const newSelectedAlpaca = {
         id: randomItem.id,
         label: randomItem.label,
-        filename: randomItem.filename,
+        src: randomItem.src,
         selected: true,
       };
       const previouslySelectedAlpaca = category.items.find(item => item.selected === true);
